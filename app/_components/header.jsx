@@ -7,7 +7,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="bg-gray-800 text-white">
+    <header className="bg-black text-white">
         {/* Top Bar */}
       <div className="bg-yellow-500 text-center text-black py-2">
         Free shipping on all orders over $50!

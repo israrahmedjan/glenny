@@ -10,7 +10,7 @@ export default function HeroSection() {
       style={{ backgroundImage: "url('/path-to-your-image.jpg')" }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black opacity-50">
+      <div className="absolute inset-0 bg-black">
       <Image 
     src="/images/heroimage-1.png" 
     alt="Description of image" 
@@ -24,9 +24,9 @@ export default function HeroSection() {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">Welcome to Our Store</h1>
-        <p className="text-lg md:text-2xl mb-8">
-          Discover the best products just for you.
+        <h1 className="text-4xl md:text-6xl font-bold mb-4 uppercase">Over 2 Million HSPS</h1>
+        <p className="text-lg md:text-4xl mb-8 uppercase">
+          Served Since 2016.
         </p>
 
         {/* Buttons */}
