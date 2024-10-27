@@ -32,7 +32,7 @@ export default function HeroSection() {
         {/* Buttons */}
         <div className="flex space-x-4">
           <Link href="/shop">
-            <button className="bg-yellow-500 text-black px-6 py-3 rounded-md hover:bg-yellow-600">
+            <button className="bg-yellow-500 text-white px-6 py-3 rounded-md hover:bg-yellow-600">
               Shop Now
             </button>
           </Link>

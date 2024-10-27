@@ -20,7 +20,7 @@ export default function ProductCard({ product }) {
       {/* Product Details - Always Visible */}
       <div className="p-4">
         <h2 className="text-2xl font-bold">{product.title}</h2>
-        <p className="text-sm text-gray-500 text-[14px]">{product.description}</p>
+        <p className="text-gray-700 text-lg">{product.description}</p>
         <button className="w-[100px] py-2 mt-4 bg-yellow-500 text-white rounded hover:bg-yellow-700 transition duration-300">
           View More
         </button>
