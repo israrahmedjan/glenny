@@ -6,6 +6,7 @@ import ProductCard from "./_components/productCard";
 import TwoColumnSection from "./_components/aboutus";
 import TwoColumnSection2 from "./_components/aboutus-2";
 import Firebasedemo from "./_components/firebasedemo";
+import Counter from "./_components/Counter";
 
 export default function Home() {
 
@@ -70,6 +71,7 @@ export default function Home() {
 
   return (
     <div>
+     <div><Counter /></div>
       <Firebasedemo />
      {/* <Header /> */}
      {/* <HeroSection /> */}
