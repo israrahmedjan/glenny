@@ -2,7 +2,6 @@ import localFont from "next/font/local";
 import { Roboto } from 'next/font/google';
 import "./globals.css";
 import { Providers } from "./_components/redux/Providers";
-import FooterPage from "./_components/footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -31,11 +30,9 @@ export default function RootLayout({ children }) {
       <body
         className={roboto.className}
       >
-        <Providers>  
-       
-        {children} 
-        <FooterPage /> 
-      </Providers>
+        <Providers>
+        {children}
+        </Providers>
       </body>
     </html>
   );
