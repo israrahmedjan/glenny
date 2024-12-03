@@ -5,7 +5,6 @@ import { fetchProductFirst, fetchProductNext, fetchProductPrev } from '../fireba
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Loader from '../Loader';
 import ProductCard from './ProductCard';
-import { useSelector, useDispatch } from 'react-redux';
 
 function ProductsByCategory({ categoryId, limit,categoryname }) {
     const [productData, setProductData] = useState(null);
