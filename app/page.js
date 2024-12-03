@@ -72,7 +72,7 @@ export default function Home() {
 
   return (
     <div>
-     <div><Counter /></div>
+     <div>Testing..<Counter /></div>
       <Firebasedemo />
       {/* <ProductsByCategory categoryId={1} limit={4} categoryname="Electronics" /> */}
      {/* <Header /> */}
