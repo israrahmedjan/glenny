@@ -6,7 +6,6 @@ import ProductCard from "./_components/productCard";
 import TwoColumnSection from "./_components/aboutus";
 import TwoColumnSection2 from "./_components/aboutus-2";
 import Firebasedemo from "./_components/firebasedemo";
-import Counter from "./_components/Counter";
 import ProductsByCategory from "./_components/products/ProductsByCategory";
 
 export default function Home() {
@@ -72,7 +71,7 @@ export default function Home() {
 
   return (
     <div>
-     <div>Testing..<Counter /></div>
+     
       {/* <Firebasedemo /> */}
       <ProductsByCategory categoryId={1} limit={4} categoryname="Electronics" />
      {/* <Header /> */}
