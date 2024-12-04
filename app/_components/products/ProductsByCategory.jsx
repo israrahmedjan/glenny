@@ -33,7 +33,7 @@ function ProductsByCategory({ categoryId, limit, categoryname }) {
 
   return (
     <div>
-      <h1>Products by Category 88888888888 </h1>
+      <h1>Products by Category 22222222222 </h1>
       {error && <p style={{ color: 'red' }}>{error}</p>}
       <pre>{JSON.stringify(products, null, 2)}</pre>
     </div>
