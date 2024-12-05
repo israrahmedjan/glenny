@@ -1,11 +1,3 @@
-import Image from "next/image";
-import Header from "./_components/header";
-import Footer from "./_components/footer";
-import HeroSection from "./_components/herosection";
-import ProductCard from "./_components/productCard";
-import TwoColumnSection from "./_components/aboutus";
-import TwoColumnSection2 from "./_components/aboutus-2";
-import Firebasedemo from "./_components/firebasedemo";
 import ProductsByCategory from "./_components/products/ProductsByCategory";
 import Counter from "./_components/Counter";
 
