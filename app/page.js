@@ -7,6 +7,7 @@ import TwoColumnSection from "./_components/aboutus";
 import TwoColumnSection2 from "./_components/aboutus-2";
 import Firebasedemo from "./_components/firebasedemo";
 import ProductsByCategory from "./_components/products/ProductsByCategory";
+import Counter from "./_components/Counter";
 
 export default function Home() {
 
@@ -73,6 +74,7 @@ export default function Home() {
     <div>
      
       {/* <Firebasedemo /> */}
+      <Counter />
       <ProductsByCategory categoryId={1} limit={4} categoryname="Electronics" />
      {/* <Header /> */}
      {/* <HeroSection /> */}
