@@ -10,7 +10,7 @@ function ProductsByCategory({ categoryId, limit, categoryname }) {
     try {
       console.log('Fetching categories...');
       const { data, error } = await supabase
-        .from('Category') // Ensure this matches your Supabase table name
+        .from('Category') // Ensure this matches your Supabase table name skdfj 
         .select('*'); // Fetch all columns
 
       if (error) {
