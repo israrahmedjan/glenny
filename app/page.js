@@ -1,3 +1,4 @@
+import Counter from "./_components/Counter";
 import ProductsByCategory from "./_components/products/ProductsByCategory";
 
 export default function Home() {
@@ -65,7 +66,7 @@ export default function Home() {
     <div>
      
       {/* <Firebasedemo /> */}
-     
+     <Counter />
       <ProductsByCategory categoryId={1} limit={4} categoryname="Electronics" />
      {/* <Header /> */}
      {/* <HeroSection /> */}
