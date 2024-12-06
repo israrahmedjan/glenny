@@ -57,8 +57,9 @@ function HeaderPage() {
     <Image src={process.env.NEXT_PUBLIC_DOMAIN+`assets/images/logo.png`} width={250} height={220} alt="" />
     </Link> */}
         <Link href="/" className="block text-teal-600 mt-4">
-          <Image
-            src={new URL('assets/images/logo.png', process.env.NEXT_PUBLIC_DOMAIN).toString()}
+ 
+<Image
+            src={`${process.env.NEXT_PUBLIC_DOMAIN}/assets/images/logo.png/`}
             width={250}
             height={220}
             alt="Logo"
