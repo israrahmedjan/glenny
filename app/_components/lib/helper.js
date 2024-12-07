@@ -16,7 +16,7 @@ export default async function fetchProducts() {
               title
           )
       `)
-      .eq('cat_id', 2)
+      .eq('cat_id', 3)
       .order('price', { ascending: true });
 
       if (error) {

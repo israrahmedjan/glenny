@@ -9,7 +9,7 @@ function ProductCard({item}) {
     <>
     {/* <div>ProductCard{JSON.stringify(item,null,2)}</div> */}
 
-<div className="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white">
+    <div className="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white">
       {/* item Image */}
       <Link href={`${process.env.NEXT_PUBLIC_DOMAIN}/product/${item.slug}`}>      
       <Image 

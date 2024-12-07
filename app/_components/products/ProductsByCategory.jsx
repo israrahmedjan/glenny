@@ -17,12 +17,13 @@ function ProductsByCategory({ categoryId, limit, categoryname }) {
   }, []);
 
   return (
-    <div>
-                  <div className='md:mx-12 border-gray-50 border rounded-md px-2'>
+    <>
+                  <div className='border-gray-100 border-r-2 border py-3 px-2 mx-16 my-2'>
+                  <div className="grid grid-cols-4 gap-4">
                 {/* <p>{JSON.stringify(plusstr)}</p> */}
 
 
-                <div className='md:mx-12 border-gray-50 border rounded-md px-2'>
+               
                     {/* Sort Items  */}
                    
     
@@ -31,17 +32,18 @@ function ProductsByCategory({ categoryId, limit, categoryname }) {
       {products && (
         products.map((prod,index)=>{
        return(
-            <div key={index}>
+          <div key={index}>
           <ProductCard item={prod} />
-         </div>
+          </div>
+        
        )
    
         })
       )}
       </div>
-      </div>
+     </div>
 
-    </div>
+    </>
   );
 }
 
