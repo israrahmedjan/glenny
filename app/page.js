@@ -1,73 +1,17 @@
 import Counter from "./_components/Counter";
+import HomePage from "./_components/Home";
 import ProductsByCategory from "./_components/products/ProductsByCategory";
 
 export default function Home() {
 
 
-  const product = [
-    {
-      title: "Awesome Product",
-      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-      imageUrl: "/images/product-2.png",
-    },
-    {
-      title: "Awesome Product - 2",
-      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-      imageUrl: "/images/product-2.png",
-    },
-    {
-      title: "Awesome Product - 3",
-      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-      imageUrl: "/images/product-2.png",
-    },
-    {
-      title: "Awesome Product - 4",
-      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-      imageUrl: "/images/product-2.png",
-    },
-    {
-      title: "Awesome Product - 5",
-      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-      imageUrl: "/images/product-2.png",
-    },
-    {
-      title: "Awesome Product -6",
-      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-      imageUrl: "/images/product-2.png",
-    },
-    {
-      title: "Awesome Product - 7",
-      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-      imageUrl: "/images/product-2.png",
-    },
-    {
-      title: "Awesome Product - 8",
-      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-      imageUrl: "/images/product-2.png",
-    } ,
-    {
-      title: "Awesome Product - 9",
-      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-      imageUrl: "/images/product-2.png",
-    },
-    // {
-    //   title: "Awesome Product - 10",
-    //   description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-    //   imageUrl: "/images/product-2.png",
-    // }     
-  ]
-  // const product = {
-  //   title: "Awesome Product",
-  //   description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-  //   imageUrl: "/images/product-2.png",
-  // };
-
+  
   return (
     <div className="border-red-500 border">
      
       {/* <Firebasedemo /> */}
      {/* <Counter /> */}
-      <ProductsByCategory categoryId={1} limit={4} categoryname="Electronics" />
+     <HomePage />
      {/* <Header /> */}
      {/* <HeroSection /> */}
      {/* <div className="flex flex-col items-center mt-8 mx-8">
