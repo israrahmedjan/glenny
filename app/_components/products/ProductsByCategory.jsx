@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 import fetchProducts from '../lib/helper';
+import ProductCard from './ProductCard';
 
 function ProductsByCategory({ categoryId, limit, categoryname }) {
   const [products, setProducts] = useState([]);
@@ -17,10 +18,29 @@ function ProductsByCategory({ categoryId, limit, categoryname }) {
 
   return (
     <div>
-      <h1>Products by Category </h1>
+                  <div className='md:mx-12 border-gray-50 border rounded-md px-2'>
+                {/* <p>{JSON.stringify(plusstr)}</p> */}
+
+
+                <div className='md:mx-12 border-gray-50 border rounded-md px-2'>
+                    {/* Sort Items  */}
+                   
     
      
-      <pre>{JSON.stringify(products, null, 2)}</pre>
+      {/* <pre>{JSON.stringify(products, null, 2)}</pre> */}
+      {products && (
+        products.map((prod,index)=>{
+       return(
+            <div key={index}>
+          <ProductCard item={prod} />
+         </div>
+       )
+   
+        })
+      )}
+      </div>
+      </div>
+
     </div>
   );
 }

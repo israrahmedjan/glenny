@@ -66,7 +66,7 @@ export default function Home() {
     <div>
      
       {/* <Firebasedemo /> */}
-     <Counter />
+     {/* <Counter /> */}
       <ProductsByCategory categoryId={1} limit={4} categoryname="Electronics" />
      {/* <Header /> */}
      {/* <HeroSection /> */}

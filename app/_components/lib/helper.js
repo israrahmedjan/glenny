@@ -3,12 +3,25 @@ export default async function fetchProducts() {
     try {
       console.log('Fetching categories...');
       const { data, error } = await supabase
-        .from('category') // Ensure this matches your Supabase table name skdfj 
-        .select('*'); // Fetch all columns
+      .from('products')
+      .select(`
+          pro_id,
+          name,
+          price,
+          cat_id,
+          slug,
+          mainImage,
+          categories (
+              id,
+              title
+          )
+      `)
+      .eq('cat_id', 2)
+      .order('price', { ascending: true });
 
       if (error) {
-        console.error('Error fetching categories:', error.message);
-        setError(error.message);
+        console.log('Error fetching categories:', error.message);
+      //  setError(error.message);
         return;
       }
 
