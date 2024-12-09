@@ -7,7 +7,7 @@ export default function Home() {
 
   
   return (
-    <div className="border-red-500 border">
+    <div className="">
      
       {/* <Firebasedemo /> */}
      {/* <Counter /> */}

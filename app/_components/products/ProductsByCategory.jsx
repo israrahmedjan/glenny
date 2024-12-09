@@ -15,7 +15,7 @@ function ProductsByCategory({ categoryId, limit, categoryname }) {
 
 
   const fetchProducts1 = async () => {
-    const data = await fetchProducts(currentPage, pageSize, orderItem);
+    const data = await fetchProducts(currentPage, pageSize, orderItem,categoryId);
     setProducts(data)
     setloading(false);
   }

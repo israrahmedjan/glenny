@@ -1,5 +1,5 @@
 import { supabase } from '../lib/supabaseClient';
-export default async function fetchProducts(page = 1, pageSize = 3,orderItem) {
+export default async function fetchProducts(page = 1, pageSize = 3,orderItem,cat_id=3) {
     try {
 
       console.log('Fetching categories...',orderItem);
@@ -36,7 +36,9 @@ export default async function fetchProducts(page = 1, pageSize = 3,orderItem) {
                 title
             )
         `)
-      .range(start, end);
+      .range(start, end)
+      .order(orderItem.ordername, { ascending: orderItem.asc }) 
+      .eq('cat_id', cat_id);
     
 //.eq('cat_id', 3)
       if (error) {
