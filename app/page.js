@@ -11,6 +11,7 @@ export default function Home() {
      
       {/* <Firebasedemo /> */}
      {/* <Counter /> */}
+     {/* <Counter /> */}
      <HomePage />
      {/* <Header /> */}
      {/* <HeroSection /> */}
