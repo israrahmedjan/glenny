@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useSelector } from 'react-redux';
+import MiniCart from './MiniCart'
+// import { useSelector } from 'react-redux';
+// import MiniCart from './MiniCart';
 
 function ProductCard({item}) {
   
@@ -11,7 +13,7 @@ function ProductCard({item}) {
 
     <div className="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white">
       {/* item Image */}
-      <Link href={`${process.env.NEXT_PUBLIC_DOMAIN}/product/${item.slug}`}>      
+      <Link href={`${process.env.NEXT_PUBLIC_DOMAIN}/product/${item.pro_id}`}>      
       <Image 
         className="w-full md:h-[320px] object-cover" 
         src={item?.mainImage} 
@@ -24,7 +26,7 @@ function ProductCard({item}) {
       <div className="p-6">
         <div className='flex justify-between'>
         {/* item Title */}
-        <Link href={`#`}>
+        <Link href={`${process.env.NEXT_PUBLIC_DOMAIN}/product/${item.pro_id}`}>
         <h2 className="text-[16px] font-semibold text-primary">{item.name}</h2>
         </Link>
         
@@ -48,6 +50,9 @@ function ProductCard({item}) {
           </button> */}
           <div className='flex justify-between'>
           {/* <MiniCart item={item}  /> */}
+          
+          <MiniCart item={item} />
+        
           <h1 className=''>{item.categories.title}</h1>
           </div>
         </div>

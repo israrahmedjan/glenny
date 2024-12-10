@@ -1,8 +1,9 @@
+'use client'
 import React from 'react'
 
-function productDetail() {
+function productDetail({product}) {
   return (
-    <div>productDetail</div>
+    <div>productDetail 11111{JSON.stringify(product,null,0)}</div>
   )
 }
 

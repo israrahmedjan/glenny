@@ -64,7 +64,7 @@ export default async function fetchProducts(page = 1, pageSize = 3,orderItem,cat
   
       // Check for errors in the RPC response
       if (error) {
-        console.error('Error calling RPC:', error.message);
+      //  console.error('Error calling RPC:', error.message);
         return null; // Return null if an error occurs
       }
   
@@ -74,5 +74,41 @@ export default async function fetchProducts(page = 1, pageSize = 3,orderItem,cat
       console.error('Unexpected error:', err.message);
       return null; // Return null if an unexpected error occurs
     }
+  }
+  export async function getProductDetail(prod_id) {
+
+    try {
+
+     
+      const { data, error } = await supabase
+      .from('products')
+      .select(`
+            pro_id,
+            name,
+            price,
+            cat_id,
+            slug,
+            mainImage,
+            categories (
+                id,
+                title
+            )
+        `)
+      .eq('pro_id',prod_id);
+    
+//.eq('cat_id', 3)
+      if (error) {
+        console.log('Error fetching categories:', error.message);
+      //  setError(error.message);
+        return;
+      }
+
+      console.log('Fetched data:', data);
+      return data[0];
+    } catch (err) {
+      console.error('Unexpected error:', err);
+      setError('An unexpected error occurred.');
+    }
+
   }
   

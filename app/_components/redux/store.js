@@ -2,7 +2,7 @@
 'use client'
 import { configureStore } from '@reduxjs/toolkit';
 import { createSlice } from '@reduxjs/toolkit';
-
+import CartSlice from './CartSlice';
 // Example Slice
 const counterSlice = createSlice({
   name: 'counter',
@@ -26,6 +26,7 @@ export const { increment, decrement, incrementByAmount } = counterSlice.actions;
 const store = configureStore({
   reducer: {
     counter: counterSlice.reducer,
+    cart:CartSlice,
   },
 });
 

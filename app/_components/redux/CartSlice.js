@@ -1,8 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { act } from "react-dom/test-utils";
-
-// Create a slice with a name, initial state, and reducers
-
 const initialState = {
   Cartitems: [], // Ensuring this is an empty array instead of null
   totalAmount: 0,
