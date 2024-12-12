@@ -15,7 +15,7 @@ const CartSlice = createSlice({
     initialState,
     reducers: {
         AddItems: (state, action) => {
-            const oldItem = state.Cartitems.find((item)=>item.id === action.payload.id)
+            const oldItem = state.Cartitems.find((item)=>item.pro_id === action.payload.pro_id)
             const index = state.Cartitems.indexOf(oldItem);
             if(oldItem)
             {
@@ -32,7 +32,7 @@ const CartSlice = createSlice({
           },
           UpdateItems: (state, action) => {
            
-            const oldItem = state.Cartitems.find((item)=>item.id === action.payload.id)
+            const oldItem = state.Cartitems.find((item)=>item.pro_id === action.payload.pro_id)
             if(oldItem != "undefined")
             {
              const index = state.Cartitems.indexOf(oldItem);
@@ -66,6 +66,10 @@ const CartSlice = createSlice({
           EmptyCartAC: (state,act)=>{
             state.Cartitems = []
            // console.log("Cart is empty successfull!")
+          },
+          hideToggle: (state,action)=>{
+            state.cartstatus = false;
+           // console.log("Cart is empty successfull!")
           }
           
      }, 
@@ -91,5 +95,5 @@ const CartSlice = createSlice({
            return total
 
   }
-export const { AddItems,UpdateItems,RemoveItemAC,EmptyCartAC } = CartSlice.actions;
+export const { AddItems,UpdateItems,RemoveItemAC,EmptyCartAC,hideToggle } = CartSlice.actions;
 export default CartSlice.reducer;

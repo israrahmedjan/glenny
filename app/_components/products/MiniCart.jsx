@@ -1,7 +1,7 @@
 // components/MiniCart.js
 "use client"; // Ensure client-side rendering for interactivity
 import { useEffect, useState } from "react";
-import { AddItems } from "../redux/CartSlice";
+import { AddItems,hideToggle } from "../redux/CartSlice";
 import { useDispatch,useSelector } from "react-redux";
 import Image from "next/image";
 
@@ -10,14 +10,16 @@ export default function MiniCart({item}) {
    const products = useSelector((state) => state.cart?.Cartitems);
    const TotalPrice = useSelector((state) => state.cart?.TotalPrice);
    const TotalNumItems = useSelector((state) => state.cart?.TotalNumItems);
+   const cartstatus = useSelector((state) => state.cart?.cartstatus);
+   
   const dispatch = useDispatch();
   // console.log("My Cart Items:", products);
   const toggleCart = () => {
     // Open the cart
     
-    if (!isOpen) {
-      setIsOpen(true);
-    }
+    // if (!isOpen) {
+    //   setIsOpen(true);
+    // }
     dispatch(AddItems({...item,qty:1}));
     
 
@@ -47,10 +49,10 @@ console.log("Items added! useffect");
       </button>
 
       {/* Mini Cart Drawer */}
-     <div>open cond{JSON.stringify(isOpen)}</div>
+     {/* <div>open cond{JSON.stringify(isOpen)}</div> */}
       <div
         className={`fixed z-40 top-0 right-0 w-80 h-full bg-white shadow-lg transform ${
-          isOpen ? "translate-x-0" : "translate-x-full"
+          cartstatus ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300 ease-in-out`}
       >
        {/* custom script */}
@@ -58,7 +60,7 @@ console.log("Items added! useffect");
           
           <div className="flex justify-between text-[16px] font-semibold mx-2 my-4">
               <h1 className="text-primary">Cart items</h1>
-              <span className="cursor-pointer" onClick={() => setIsOpen(false)} >X</span>
+              <span className="cursor-pointer" onClick={() => dispatch(hideToggle())} >X</span>
           </div>
           
           <hr className="border-t-2 border-gray-100 mx-0" />

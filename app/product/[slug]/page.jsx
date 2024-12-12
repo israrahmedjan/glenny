@@ -27,12 +27,12 @@ function page() {
    
     
     <div> 
-      <div>Category id{slug}</div>
+      {/* <div>Category id{slug}</div> */}
      {(product.length == 0) && (<Loader />)}
      {(product.length !=0) && (
   <ProductInfo item={product} />
      )}
-<div>Related Products</div>
+{/* <div>Related Products</div> */}
 <ProductsByCategory categoryId={product.cat_id} limit={4} categoryname={product.name} />
       </div>
       

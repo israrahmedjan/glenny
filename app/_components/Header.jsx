@@ -7,8 +7,8 @@ import { ShoppingCart, Mail, Phone, Twitter, Facebook, Instagram } from 'lucide-
 import { useDispatch, useSelector } from "react-redux";
 
 function HeaderPage() {
-  // const totalItems = useSelector((state) => state.cart?.TotalNumItems);
-  // const cartItemCount = totalItems;//5; // Example cart count
+  const totalItems = useSelector((state) => state.cart?.TotalNumItems);
+  const cartItemCount = totalItems;//5; // Example cart count
 
 
   // console.log("Products in header", cartItemCount);
@@ -138,11 +138,11 @@ function HeaderPage() {
               <Link href={process.env.NEXT_PUBLIC_DOMAIN + `/cartdetail`} className='relative text-primary font-bold'>
                 <ShoppingCart size={36} />
                 {/* Cart count badge */}
-                {/* {cartItemCount > 0 && (
+                {cartItemCount > 0 && (
         <span className="absolute top-0 right-0 bg-red-500 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
           {cartItemCount}
         </span>
-      )} */}
+      )}
               </Link>
             </div>
 
