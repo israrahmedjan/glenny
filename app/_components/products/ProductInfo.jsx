@@ -3,7 +3,7 @@ import React from 'react'
 
 function ProductInfo({item}) {
   return (
-    <div className='mx-20'> 
+    <div className='mx-20 my-8'> 
     {item && (
     <div className="flex flex-col lg:flex-row items-center gap-12">
   {/* item Image */}
