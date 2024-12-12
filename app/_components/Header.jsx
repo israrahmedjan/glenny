@@ -105,7 +105,7 @@ function HeaderPage() {
               <li>
                 <Link
                   className="text-primary transition hover:text-secondary"
-                  href={`category/1`}
+                  href={new URL(`category/1`, process.env.NEXT_PUBLIC_DOMAIN).toString()}
                 >
                   Mobiles
                 </Link>
@@ -113,7 +113,7 @@ function HeaderPage() {
               <li>
               <Link
                   className="text-primary transition hover:text-secondary"
-                  href={`/contact`}
+                  href={new URL(`contact`, process.env.NEXT_PUBLIC_DOMAIN).toString()}
                 >
                   Contact us
                 </Link>
