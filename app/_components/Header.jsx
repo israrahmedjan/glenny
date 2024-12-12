@@ -84,38 +84,39 @@ function HeaderPage() {
               <li>
                 <Link
                   className="text-primary transition hover:text-secondary"
-                  href={new URL(`category/electronics`, process.env.NEXT_PUBLIC_DOMAIN).toString()}
+                  href={new URL(`category/3`, process.env.NEXT_PUBLIC_DOMAIN).toString()}
+                >
+                  Laptops
+                </Link>
+              </li>
+
+
+
+              <li>
+                <Link
+                  className="text-primary transition hover:text-secondary"
+                  href={new URL(`category/2`, process.env.NEXT_PUBLIC_DOMAIN).toString()}
                 >
                   Electronics
                 </Link>
               </li>
 
 
-
               <li>
                 <Link
                   className="text-primary transition hover:text-secondary"
-                  href={new URL(`category/home-appliances`, process.env.NEXT_PUBLIC_DOMAIN).toString()}
+                  href={new URL(`category/1`, process.env.NEXT_PUBLIC_DOMAIN).toString()}
                 >
-                  Home Applicances
+                  Mobiles
                 </Link>
               </li>
-
-
               <li>
-                <Link
+              <Link
                   className="text-primary transition hover:text-secondary"
-                  href={new URL(`category/mobile-phones`, process.env.NEXT_PUBLIC_DOMAIN).toString()}
+                  href={new URL(`contact`, process.env.NEXT_PUBLIC_DOMAIN).toString()}
                 >
-                  Mobile Phones
+                  Contact us
                 </Link>
-              </li>
-
-
-
-
-              <li>
-                <a className="text-primary transition hover:text-secondary" href="#"> Contact Us </a>
               </li>
             </ul>
           </nav>

@@ -2,25 +2,8 @@ import { supabase } from '../lib/supabaseClient';
 export default async function fetchProducts(page = 1, pageSize = 3,orderItem,cat_id=3) {
     try {
 
-      console.log('Fetching categories...',orderItem);
       const start = (page - 1) * pageSize;
       const end = start + pageSize - 1;
-      // const { data, error } = await supabase
-      // .from('products')
-      // .select(`
-      //     pro_id,
-      //     name,
-      //     price,
-      //     cat_id,
-      //     slug,
-      //     mainImage,
-      //     categories (
-      //         id,
-      //         title
-      //     )
-      // `)
-      // .order('pro_id', { ascending: true });
-
 
       const { data, error } = await supabase
       .from('products')
@@ -46,7 +29,11 @@ export default async function fetchProducts(page = 1, pageSize = 3,orderItem,cat
       //  setError(error.message);
         return;
       }
-
+if(cat_id)
+{
+  const PageCount = await getProductCount(cat_id);
+  console.log("Count pages", PageCount);
+}
       console.log('Fetched data:', data);
       return data;
     } catch (err) {
@@ -104,6 +91,37 @@ export default async function fetchProducts(page = 1, pageSize = 3,orderItem,cat
       }
 
       console.log('Fetched data:', data);
+      return data[0];
+    } catch (err) {
+      console.error('Unexpected error:', err);
+      setError('An unexpected error occurred.');
+    }
+
+  }
+
+  export async function getCategoryDetail(cat_id) {
+
+    try {
+
+     
+      const { data, error } = await supabase
+      .from('categories')
+      .select(`
+            id,
+            title,
+            description,
+            slug
+        `)
+      .eq('id',cat_id);
+    
+//.eq('cat_id', 3)
+      if (error) {
+        console.log('Error fetching categories:', error.message);
+      //  setError(error.message);
+        return;
+      }
+
+      console.log('caregory data:', data);
       return data[0];
     } catch (err) {
       console.error('Unexpected error:', err);
