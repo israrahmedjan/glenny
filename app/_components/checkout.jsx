@@ -11,7 +11,7 @@ import { useDispatch,useSelector } from "react-redux";
 export default function CheckoutPage() {
   const [loading, setLoading] = useState(false);
   const totalPrice = useSelector((state) => state.cart?.TotalPrice);
- console.log("Product in checkout page", totalPrice)
+ //console.log("Product in checkout page", totalPrice)
 
   const handleCheckout = async () => {
     setLoading(true);
