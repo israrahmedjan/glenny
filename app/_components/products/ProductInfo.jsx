@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
+import MiniCart from './MiniCart'
 
 function ProductInfo({item}) {
   return (
@@ -37,7 +38,7 @@ function ProductInfo({item}) {
     >
       Add to Cart
     </button> */}
-
+<MiniCart item={item} />
 
     {/* Back Button */}
     <button
