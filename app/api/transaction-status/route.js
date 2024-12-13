@@ -1,8 +1,8 @@
 //import GlobalApi from '@/app/_utils/GlobalApi';
 import { NextResponse } from 'next/server';
-import { Resend } from 'resend';
+//import { Resend } from 'resend';
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
-const resend = new Resend(process.env.RESEND_API_KEY);
+//const resend = new Resend(process.env.RESEND_API_KEY);
 
 
 export async function GET(req) {
