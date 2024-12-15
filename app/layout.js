@@ -2,7 +2,8 @@ import localFont from "next/font/local";
 import { Roboto } from 'next/font/google';
 import "./globals.css";
 import { Providers } from "./_components/redux/Providers";
-import HeaderPage from "./_components/Header";
+
+import HeaderPage from "./_components/Header/Header";
 import FooterPage from "./_components/Footer";
 
 const geistSans = localFont({

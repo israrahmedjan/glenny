@@ -27,7 +27,7 @@ function ProductCard({item}) {
         <div className='flex justify-between'>
         {/* item Title */}
         <Link href={`${process.env.NEXT_PUBLIC_DOMAIN}/product/${item.pro_id}`}>
-        <h2 className="text-[16px] font-semibold text-primary">{item.name}</h2>
+        <h2 className="text-[16px] font-normal text-primary ">{item.name}</h2>
         </Link>
         
         {/* Price */}
