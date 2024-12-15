@@ -3,17 +3,18 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useDispatch, useSelector } from "react-redux";
 import { ShoppingCart, Mail, Phone, Twitter, Facebook, Instagram } from 'lucide-react';
+import AdvancedSearchBox from './AdvancedSearchBox';
 
 function MainMenu() {
     const totalItems = useSelector((state) => state.cart?.TotalNumItems);
     const cartItemCount = totalItems;//5; // Example cart count
   return (
    <>
-         <div className="mx-auto flex h-22 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
+         <div className="mx-auto flex h-22 max-w-screen-xl  items-center gap-8 px-4 sm:px-6 lg:px-8">
         {/* <Link href="/" className="block text-teal-600 mt-4">
     <Image src={process.env.NEXT_PUBLIC_DOMAIN+`assets/images/logo.png`} width={250} height={220} alt="" />
     </Link> */}
-        <Link href="/" className="block text-teal-600 mt-4 mb-4">
+        <Link href="/" className="mt-4 mb-4">
 
           <Image
             src={`${process.env.NEXT_PUBLIC_DOMAIN}/assets/images/logo.jpg`}
@@ -26,10 +27,8 @@ function MainMenu() {
 
 
 
-        <div className="flex flex-1 items-center justify-end md:justify-between mt-4">
+        <div className="flex flex-1 items-center md:justify-end mt-4">
           <nav aria-label="Global" className="hidden md:block">
-
-
             {/* <ul className="flex items-center gap-6 text-[15px] font-semibold">
               <li>
                 <Link href="/" className="text-primary font-semibold transition hover:text-secondary"> Home </Link>
@@ -78,8 +77,11 @@ function MainMenu() {
             </ul> */}
           </nav>
 
-          <div className="flex items-center gap-4">
-            <div className="sm:flex sm:gap-4">
+          <div className="flex items-center gap-4 border-gray-900">
+            <div className="md:justify-between sm:flex sm:gap-4">
+             
+             {/* <div className='w-1/2'><AdvancedSearchBox /></div> */}
+             <div className='flex items-center gap-3'>
               <a
                 className="block rounded-md bg-secondary px-5 py-2.5 text-sm font-medium text-white transition hover:bg-teal-700"
                 href="#"
@@ -93,16 +95,8 @@ function MainMenu() {
               >
                 Register
               </a>
-              <Link href={process.env.NEXT_PUBLIC_DOMAIN + `/cartdetail`} className='relative text-primary font-bold'>
-                <ShoppingCart size={36} />
-                {/* Cart count badge */}
-                {cartItemCount > 0 && (
-                  <span className="absolute top-0 right-0 bg-red-500 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
-                    {cartItemCount}
-                  </span>
-                )}
-              </Link>
-            </div>
+              </div>
+                         </div>
 
             
           </div>

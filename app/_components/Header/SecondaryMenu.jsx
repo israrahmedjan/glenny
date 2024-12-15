@@ -20,15 +20,15 @@ function SecondaryMenu() {
              <div className="bg-black  hidden md:block mx-auto">
              <div className="flex h-16 items-center justify-between w-full md:max-w-[1220px] mx-auto">         
                <nav aria-label="Global" className="">
-            <ul className="flex gap-6 text-[18px] text-white font-normal uppercase">
-              <li className='w-[120px]'>
+            <ul className="flex gap-12 text-[14px] text-white font-normal uppercase">
+              <li className=''>
                 <Link href="/" className="transition hover:text-secondary"> Home </Link>
               </li>
-              <li className='w-[120px]'>
+              <li className=''>
                 <Link href="/about" className="transition hover:text-secondary"> About </Link>
               </li>
 
-              <li className='w-[120px]'>
+              <li className=''>
                 <Link
                   className="transition hover:text-secondary"
                   href={new URL(`category/3`, process.env.NEXT_PUBLIC_DOMAIN).toString()}
@@ -39,7 +39,7 @@ function SecondaryMenu() {
 
 
 
-              <li className='w-[120px]'>
+              <li className=''>
                 <Link
                   className="transition hover:text-secondary"
                   href={new URL(`category/2`, process.env.NEXT_PUBLIC_DOMAIN).toString()}
@@ -49,7 +49,7 @@ function SecondaryMenu() {
               </li>
 
 
-              <li className='w-[120px]'>
+              <li className=''>
                 <Link
                   className="transition hover:text-secondary"
                   href={new URL(`category/1`, process.env.NEXT_PUBLIC_DOMAIN).toString()}
@@ -57,7 +57,7 @@ function SecondaryMenu() {
                   Mobiles
                 </Link>
               </li>
-              <li className='w-[120px]'>
+              <li className=''>
                 <Link
                   className="transition hover:text-secondary"
                   href={new URL(`contact`, process.env.NEXT_PUBLIC_DOMAIN).toString()}
