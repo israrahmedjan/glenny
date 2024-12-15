@@ -17,7 +17,7 @@ function HeaderPage() {
   return (
     <header className="bg-white shadow-md">
       {/* Top Bar */}
-      <div className="bg-primary text-white text-[14px] py-1 ">
+      <div className="bg-black text-white text-[14px] py-1 ">
         <div className="container  mx-auto px-2 flex justify-between items-center">
           {/* Left Side: Text */}
           <span>Welcome to Our Store! Get the best deals today.</span>
@@ -59,9 +59,9 @@ function HeaderPage() {
         <Link href="/" className="block text-teal-600 mt-4">
  
 <Image
-            src={`${process.env.NEXT_PUBLIC_DOMAIN}/assets/images/logo.png/`}
-            width={250}
-            height={220}
+            src={`${process.env.NEXT_PUBLIC_DOMAIN}/assets/images/logo.jpg`}
+            width={186}
+            height={74}
             alt="Logo"
           />
         </Link>
@@ -75,7 +75,7 @@ function HeaderPage() {
 
             <ul className="flex items-center gap-6 text-[15px] font-semibold">
               <li>
-                <Link href="/" className="text-primary transition hover:text-secondary"> Home </Link>
+                <Link href="/" className="text-primary font-semibold transition hover:text-secondary"> Home </Link>
               </li>
               <li>
                 <Link href="/about" className="text-primary transition hover:text-secondary"> About </Link>

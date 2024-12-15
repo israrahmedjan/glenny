@@ -3,7 +3,9 @@ import { useEffect, useState } from 'react';
 import fetchProducts, { getProductCount } from '../lib/helper';
 import ProductCard from './ProductCard';
 import Loader from '../Loader';
-import { ArrowDownNarrowWide, ArrowUpNarrowWide, ChevronRight, ChevronLeft } from 'lucide-react';
+import { ArrowDownNarrowWide, ArrowUpNarrowWide, ChevronRight, ChevronLeft,BaggageClaim,TabletSmartphone } from 'lucide-react';
+import {  } from 'lucide-react';
+
 
 function ProductsByCategory({ categoryId, limit, categoryname }) {
   const [products, setProducts] = useState([]);
@@ -73,7 +75,11 @@ function ProductsByCategory({ categoryId, limit, categoryname }) {
     <>
       <div className='border-gray-100 border-r-2 border py-3 px-2 mx-16 my-2'>
         <div className='flex justify-between my-2'>
-          <h1 className="text-[25px]">{categoryname}</h1>
+       
+        <div className="flex items-center">
+  {/* <BaggageClaim className='size-12 text-primary' /> */}
+  <h1 className="text-[25px] text-secondary font-semibold ml-2">{categoryname}</h1>
+</div>
           <div className='flex items-center gap-2'>
 
 
