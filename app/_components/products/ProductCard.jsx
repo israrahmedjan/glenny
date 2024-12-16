@@ -23,7 +23,7 @@ function ProductCard({item}) {
       </Link>
 
       
-      <div className="p-6">
+      <div className="">
         <div className='flex justify-between'>
         {/* item Title */}
         <Link href={`${process.env.NEXT_PUBLIC_DOMAIN}/product/${item.pro_id}`}>

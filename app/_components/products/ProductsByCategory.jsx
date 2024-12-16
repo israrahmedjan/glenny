@@ -3,8 +3,8 @@ import { useEffect, useState } from 'react';
 import fetchProducts, { getProductCount } from '../lib/helper';
 import ProductCard from './ProductCard';
 import Loader from '../Loader';
-import { ArrowDownNarrowWide, ArrowUpNarrowWide, ChevronRight, ChevronLeft,BaggageClaim,TabletSmartphone } from 'lucide-react';
-import {  } from 'lucide-react';
+import { ArrowDownNarrowWide, ArrowUpNarrowWide, ChevronRight, ChevronLeft, BaggageClaim, TabletSmartphone } from 'lucide-react';
+import { } from 'lucide-react';
 
 
 function ProductsByCategory({ categoryId, limit, categoryname }) {
@@ -17,7 +17,7 @@ function ProductsByCategory({ categoryId, limit, categoryname }) {
 
 
   const fetchProducts1 = async () => {
-    const data = await fetchProducts(currentPage, pageSize, orderItem,categoryId);
+    const data = await fetchProducts(currentPage, pageSize, orderItem, categoryId);
     setProducts(data)
     setloading(false);
   }
@@ -73,14 +73,14 @@ function ProductsByCategory({ categoryId, limit, categoryname }) {
 
   return (
     <>
-      <div className='border-gray-100 border-r-2 border py-3 px-2 mx-16 my-2'>
-        <div className='flex justify-between my-2'>
-       
-        <div className="flex items-center">
-  {/* <BaggageClaim className='size-12 text-primary' /> */}
-  <h1 className="text-[25px] text-secondary font-semibold ml-2">{categoryname}</h1>
-</div>
-          <div className='flex items-center gap-2'>
+      <div className='border-gray-100 border-r-2 border py-3 px-2 w-full sm:max-w-[769px] lg:max-w-[1024px] xl:max-w-[1280px] 2xl:max-w-[1536px] mx-auto'>
+      <div className='flex flex-col md:flex-row justify-between my-2 '>
+
+          <div className="flex items-center">
+            {/* <BaggageClaim className='size-12 text-primary' /> */}
+            <h1 className="text-[25px] text-secondary font-semibold ml-2">{categoryname}</h1>
+          </div>
+          <div className='flex items-center justify-end gap-2'>
 
 
             <h1>Sort</h1>
@@ -98,7 +98,7 @@ function ProductsByCategory({ categoryId, limit, categoryname }) {
           </div>
         </div>
         {(products.length == 0) && (<div><Loader /></div>)}
-        <div className="grid sm:grid-cols-1 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
           {/* <p>{JSON.stringify(plusstr)}</p> */}
           {/* Sort Items  */}
           {/* <pre>{JSON.stringify(products, null, 2)}</pre> */}

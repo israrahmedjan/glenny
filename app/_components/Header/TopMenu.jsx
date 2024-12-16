@@ -5,7 +5,7 @@ function TopMenu() {
   return (
     <>
          <div className="bg-black text-white text-[14px] py-1 ">
-        <div className="container  mx-auto px-2 flex justify-between items-center">
+        <div className="mx-16 px-2 flex flex-col md:flex-row justify-between items-center w-full sm:max-w-[769px] lg:max-w-[1024px] xl:max-w-[1280px] 2xl:max-w-[1536px] mx-auto">
           {/* Left Side: Text */}
           <span>Welcome to Our Store! Get the best deals today.</span>
 

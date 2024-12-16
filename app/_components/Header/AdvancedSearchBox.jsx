@@ -13,41 +13,16 @@ export default function SearchWithCategory() {
 
   return (
     <>
-    <div className="flex justify-center items-center h-20 bg-gray-100 p-4">
-      <div className="flex items-center w-full max-w-2xl space-x-4">
-       
-        {/* Search Box */}
-        <div className="relative w-2/3">
-          {/* Search Icon */}
-          <Search className="absolute left-3 top-2.5 text-gray-500" size={20} />
-
-          {/* Input Field */}
-          <input
-            type="text"
-            value={searchValue}
-            onChange={(e) => setSearchValue(e.target.value)}
-            className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:outline-none"
-            placeholder="Search for products, categories, or anything..."
-          />
-
-          {/* Clear Button */}
-          {searchValue && (
-            <button
-              onClick={handleClear}
-              type="button"
-              className="absolute right-3 top-2.5 text-gray-500 hover:text-red-500 focus:outline-none"
-            >
-              Clear
-            </button>
-          )}
-          
+    <div className="flex justify-center  border-red items-center h-auto sm:h-20 bg-gray-100 p-4">
+        <div>
+            Search Items
         </div>
          {/* Category Dropdown */}
-        <div className="relative w-1/3">
+         <div className="">
           <select
             value={selectedCategory}
             onChange={(e) => setSelectedCategory(e.target.value)}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:outline-none"
+            className="w-[100px] sm:w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:outline-none"
           >
             {categories.map((category, index) => (
               <option key={index} value={category}>
@@ -56,9 +31,7 @@ export default function SearchWithCategory() {
             ))}
           </select>
         </div>
-
       </div>
-    </div>
-    </>
+         </>
   );
 }

@@ -17,10 +17,10 @@ function SecondaryMenu() {
   return (
     <>
              
-             <div className="bg-black  hidden md:block mx-auto">
-             <div className="flex h-16 items-center justify-between w-full md:max-w-[1220px] mx-auto">         
+             <div className="bg-black  hidden md:block">
+             <div className="flex h-16 items-center justify-between px-2 w-full sm:max-w-[769px] lg:max-w-[1024px] xl:max-w-[1280px] 2xl:max-w-[1536px] mx-auto">         
                <nav aria-label="Global" className="">
-            <ul className="flex gap-12 text-[14px] text-white font-normal uppercase">
+            <ul className="flex gap-12 text-[14px]  text-white font-normal uppercase">
               <li className=''>
                 <Link href="/" className="transition hover:text-secondary"> Home </Link>
               </li>
@@ -86,7 +86,7 @@ function SecondaryMenu() {
         </div>
       {/* Mobile Responsive Script md:hidden */}
       <div className="flex items-center w-full h-12 bg-black border-b-[1px] border-secondary  text-white md:hidden">
-        <div className="flex justify-between w-[500px] mx-5">
+        <div className="flex justify-around w-full mx-auto sm:mx-0">
           <button
             onClick={toggleMenu}
             className="w-1/3 block rounded bg-primary-100 p-2.5 text-primary-600 transition hover:text-primary-600/75"

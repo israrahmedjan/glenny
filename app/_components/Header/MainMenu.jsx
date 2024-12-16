@@ -10,19 +10,21 @@ function MainMenu() {
     const cartItemCount = totalItems;//5; // Example cart count
   return (
    <>
-         <div className="mx-auto flex h-22 max-w-screen-xl  items-center gap-8 px-4 sm:px-6 lg:px-8">
+         <div className="flex flex-col sm:flex-row h-22 items-center gap-0 sm:gap-8 w-full sm:max-w-[769px] lg:max-w-[1024px] xl:max-w-[1280px] 2xl:max-w-[1536px] mx-auto">
         {/* <Link href="/" className="block text-teal-600 mt-4">
     <Image src={process.env.NEXT_PUBLIC_DOMAIN+`assets/images/logo.png`} width={250} height={220} alt="" />
     </Link> */}
-        <Link href="/" className="mt-4 mb-4">
+ <Link href="/" className="block mt-4 mb-4">
+  <Image
+    src={`${process.env.NEXT_PUBLIC_DOMAIN}/assets/images/logo.jpg`}
+    width={186} // default width for desktop
+    height={74} // default height for desktop
+    alt="Logo"
+    className="w-[120px] h-[50px] md:w-[186px] md:h-[74px]" // Responsive sizes
+  />
+</Link>
 
-          <Image
-            src={`${process.env.NEXT_PUBLIC_DOMAIN}/assets/images/logo.jpg`}
-            width={186}
-            height={74}
-            alt="Logo"
-          />
-        </Link>
+
 
 
 
@@ -77,20 +79,20 @@ function MainMenu() {
             </ul> */}
           </nav>
 
-          <div className="flex items-center gap-4 border-gray-900">
+          <div className="flex items-center gap-4 border-gray-900 w-full">
             <div className="md:justify-between sm:flex sm:gap-4">
              
-             {/* <div className='w-1/2'><AdvancedSearchBox /></div> */}
-             <div className='flex items-center gap-3'>
+          <AdvancedSearchBox />
+             <div className='flex items-center justify-around mt-2 mb-2 gap-3'>
               <a
-                className="block rounded-md bg-secondary px-5 py-2.5 text-sm font-medium text-white transition hover:bg-teal-700"
+                className="rounded-md bg-secondary px-5 py-2.5 text-sm font-medium text-white transition hover:bg-teal-700"
                 href="#"
               >
                 Login
               </a>
 
               <a
-                className="hidden rounded-md bg-primary px-5 py-2.5 text-sm font-medium text-white transition hover:text-teal-600/75 sm:block"
+                className="rounded-md bg-primary px-5 py-2.5 text-sm font-medium text-white transition hover:text-teal-600/75 sm:block"
                 href="#"
               >
                 Register

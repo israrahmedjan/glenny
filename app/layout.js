@@ -34,6 +34,7 @@ export default function RootLayout({ children }) {
         className={roboto.className}
       >
     
+    
        <Providers>
         <HeaderPage />
         {children}
