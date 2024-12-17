@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { AddItems,hideToggle } from "../redux/CartSlice";
 import { useDispatch,useSelector } from "react-redux";
+import {ShoppingBasket} from "lucide-react";
 import Image from "next/image";
 
 export default function MiniCart({item}) {
@@ -43,9 +44,11 @@ console.log("Items added! useffect");
       {/* Add to Cart Button */}
       <button
         onClick={toggleCart}
-        className="w-[100px] bg-secondary text-white text-sm py-2 rounded-lg hover:bg-secondary-dark transition duration-300"
+        className="w-[120px] border-secondary border text-primary text-sm py-2 rounded-lg hover:bg-secondary-dark transition duration-300"
       >
-        Add to Cart
+       <div className="flex items-center justify-center gap-2">
+       <span> <ShoppingBasket /></span><span>Add to Cart</span>
+        </div>
       </button>
 
       {/* Mini Cart Drawer */}

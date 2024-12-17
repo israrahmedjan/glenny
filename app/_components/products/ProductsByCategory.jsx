@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import fetchProducts, { getProductCount } from '../lib/helper';
 import ProductCard from './ProductCard';
 import Loader from '../Loader';
-import { ArrowDownNarrowWide, ArrowUpNarrowWide, ChevronRight, ChevronLeft, BaggageClaim, TabletSmartphone } from 'lucide-react';
+import { ArrowDownNarrowWide, ArrowUpNarrowWide, ChevronRight, ChevronLeft, BaggageClaim , TabletSmartphone } from 'lucide-react';
 import { } from 'lucide-react';
 
 

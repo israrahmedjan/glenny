@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import MiniCart from './MiniCart'
+import { RibbonContainer,  Right,Ribbon } from "react-ribbons";
+
 // import { useSelector } from 'react-redux';
 // import MiniCart from './MiniCart';
 
@@ -12,6 +14,23 @@ function ProductCard({item}) {
     {/* <div>ProductCard{JSON.stringify(item,null,2)}</div> */}
 
     <div className="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white p-2">
+
+    <RibbonContainer className="">
+    <Ribbon
+      side="right"
+      type="edge"
+      size="large"
+      backgroundColor="#ffab17"
+      color="#FFF"
+      fontFamily="sans"
+      withStripes
+    >
+      In Stock
+    </Ribbon>
+ 
+ 
+
+ 
       {/* item Image */}
       <Link href={`${process.env.NEXT_PUBLIC_DOMAIN}/product/${item.pro_id}`}>      
       <Image 
@@ -27,11 +46,11 @@ function ProductCard({item}) {
         <div className='flex justify-between'>
         {/* item Title */}
         <Link href={`${process.env.NEXT_PUBLIC_DOMAIN}/product/${item.pro_id}`}>
-        <h2 className="text-[18px] p-2 text-primary font-normal">{item.name}</h2>
+        <h2 className="text-[18px] p-2 text-gray-800 font-normal">{item.name}</h2>
         </Link>
         
         {/* Price */}
-        <p className="text-[18px] p-2 text-black">${item.price}</p>
+        <p className="text-[18px] p-2 text-gray-800">${item.price}</p>
         </div>
         {/* Description */}
         <p className="text-gray-600 text-sm mt-4">
@@ -57,7 +76,10 @@ function ProductCard({item}) {
           </div>
         </div>
 
+    
+
       </div>
+      </RibbonContainer>
     </div>
   
       </>
