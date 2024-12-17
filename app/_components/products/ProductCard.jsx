@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import MiniCart from './MiniCart'
-import { RibbonContainer,  Right,Ribbon } from "react-ribbons";
 
 // import { useSelector } from 'react-redux';
 // import MiniCart from './MiniCart';
@@ -15,18 +14,6 @@ function ProductCard({item}) {
 
     <div className="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white p-2">
 
-    <RibbonContainer className="">
-    <Ribbon
-      side="right"
-      type="edge"
-      size="large"
-      backgroundColor="#ffab17"
-      color="#FFF"
-      fontFamily="sans"
-      withStripes
-    >
-      In Stock
-    </Ribbon>
  
  
 
@@ -79,7 +66,6 @@ function ProductCard({item}) {
     
 
       </div>
-      </RibbonContainer>
     </div>
   
       </>
