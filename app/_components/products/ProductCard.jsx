@@ -11,7 +11,7 @@ function ProductCard({item}) {
     <>
     {/* <div>ProductCard{JSON.stringify(item,null,2)}</div> */}
 
-    <div className="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white">
+    <div className="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white p-2">
       {/* item Image */}
       <Link href={`${process.env.NEXT_PUBLIC_DOMAIN}/product/${item.pro_id}`}>      
       <Image 
@@ -27,11 +27,11 @@ function ProductCard({item}) {
         <div className='flex justify-between'>
         {/* item Title */}
         <Link href={`${process.env.NEXT_PUBLIC_DOMAIN}/product/${item.pro_id}`}>
-        <h2 className="text-[16px] font-normal text-primary ">{item.name}</h2>
+        <h2 className="text-[18px] p-2 text-primary font-normal">{item.name}</h2>
         </Link>
         
         {/* Price */}
-        <p className="text-[16px] text-primary">${item.price}</p>
+        <p className="text-[18px] p-2 text-black">${item.price}</p>
         </div>
         {/* Description */}
         <p className="text-gray-600 text-sm mt-4">

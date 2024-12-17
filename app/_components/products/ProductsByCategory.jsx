@@ -73,19 +73,19 @@ function ProductsByCategory({ categoryId, limit, categoryname }) {
 
   return (
     <>
-      <div className='border-gray-100 border-r-2 border py-3 px-2 w-full sm:max-w-[769px] lg:max-w-[1024px] xl:max-w-[1280px] 2xl:max-w-[1536px] mx-auto'>
+      <div className='border-gray-100 border-r-2 border py-3 px-2 w-full sm:max-w-[769px] lg:max-w-[1024px] xl:max-w-[1280px] 2xl:max-w-[1536px] mt-4 mx-auto'>
       <div className='flex flex-col md:flex-row justify-between my-2 '>
 
-          <div className="flex items-center">
+          <div className="flex items-center text-primary">
             {/* <BaggageClaim className='size-12 text-primary' /> */}
             <h1 className="text-[25px] text-secondary font-semibold ml-2">{categoryname}</h1>
           </div>
-          <div className='flex items-center justify-end gap-2'>
+          <div className='flex items-center justify-end gap-2 text-primary'>
 
 
             <h1>Sort</h1>
 
-            <select className='border-gray-200 border border-r-2 p-1 outline-none' onChange={(e) => handleOrder(e.target.value)}>
+            <select className='border-gray-200 border  border-r-2 p-1 outline-none' onChange={(e) => handleOrder(e.target.value)}>
               <option value={1}>Ascending By Title</option>
               <option value={2}>Descending By Title</option>
               <option value={3}>Ascending By Price</option>

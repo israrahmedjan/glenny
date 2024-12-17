@@ -20,6 +20,7 @@ function SecondaryMenu() {
              <div className="bg-black  hidden md:block">
              <div className="flex h-16 items-center justify-between px-2 w-full sm:max-w-[769px] lg:max-w-[1024px] xl:max-w-[1280px] 2xl:max-w-[1536px] mx-auto">         
                <nav aria-label="Global" className="">
+              
             <ul className="flex gap-12 text-[14px]  text-white font-normal uppercase">
               <li className=''>
                 <Link href="/" className="transition hover:text-secondary"> Home </Link>

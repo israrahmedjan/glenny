@@ -80,10 +80,10 @@ function MainMenu() {
           </nav>
 
           <div className="flex items-center gap-4 border-gray-900">
-            <div className="md:justify-between sm:flex sm:gap-4">
+            <div className="md:justify-between sm:flex sm:gap-0">
              
           <AdvancedSearchBox />
-             <div className='flex items-center justify-around gap-3'>
+             <div className='flex items-center justify-around gap-3 mt-2 mb-2'>
               <a
                 className="rounded-md bg-secondary px-5 py-2.5 text-sm font-medium text-white transition hover:bg-teal-700"
                 href="#"

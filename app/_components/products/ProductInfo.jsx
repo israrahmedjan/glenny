@@ -4,9 +4,9 @@ import MiniCart from './MiniCart'
 
 function ProductInfo({item}) {
   return (
-    <div className='mx-20 my-8'> 
+    <div className='px-2 w-full sm:max-w-[769px] lg:max-w-[1024px] xl:max-w-[1280px] 2xl:max-w-[1536px] mx-auto'> 
     {item && (
-    <div className="flex flex-col lg:flex-row items-center gap-12">
+    <div className="flex flex-col sm:flex-row items-center gap-1 mt-2 sm:gap-12">
   {/* item Image */}
   <div className="w-full lg:w-1/2">
     <Image
