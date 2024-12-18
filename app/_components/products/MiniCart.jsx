@@ -54,7 +54,7 @@ console.log("Items added! useffect");
       {/* Mini Cart Drawer */}
      {/* <div>open cond{JSON.stringify(isOpen)}</div> */}
       <div
-        className={`fixed z-40 top-0 right-0 w-80 h-full bg-white shadow-lg transform ${
+        className={`fixed z-40 top-0 right-0  w-80 h-full bg-white shadow-lg transform ${
           cartstatus ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300 ease-in-out`}
       >
@@ -62,7 +62,7 @@ console.log("Items added! useffect");
         <div className="">
           
           <div className="flex justify-between text-[16px] font-semibold mx-2 my-4">
-              <h1 className="text-primary">Cart items</h1>
+              <h1 className="text-secondary text-[15px] uppercase font-normal">Cart items</h1>
               <span className="cursor-pointer" onClick={() => dispatch(hideToggle())} >X</span>
           </div>
           
@@ -71,7 +71,7 @@ console.log("Items added! useffect");
             products.map((item,index)=>
             {
               return(<div key={index}>
-                <div className="flex justify-between mx-2 my-4 text-[12px] font-semibold">
+                <div className="flex justify-between mx-2 my-4 text-[14px] font-normal text-primary">
                   <span>{index+1}</span>
                   <span><Image src={item?.mainImage} width={50} height={50} alt={item.name} /></span>
                   <span className="md:w-[150px]">{item.name}</span>
@@ -86,7 +86,7 @@ console.log("Items added! useffect");
           }
           <hr className="border-t-2 border-gray-100 mx-2" />
           {TotalPrice && <div className="flex justify-end my-3 gap-2">
-            <span className="text-[16px] font-semibold">Total Price:    </span>
+            <span className="text-[16px] font-normal text-secondary uppercase">Total Price:    </span>
             <span>${TotalPrice}</span>
             </div>}
       </div>

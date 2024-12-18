@@ -16,11 +16,11 @@ function MainMenu() {
     </Link> */}
  <Link href="/" className="block mt-4 mb-4">
   <Image
-    src={`${process.env.NEXT_PUBLIC_DOMAIN}/assets/images/logo.jpg`}
-    width={186} // default width for desktop
-    height={74} // default height for desktop
+    src={`${process.env.NEXT_PUBLIC_DOMAIN}/assets/images/logo.png`}
+    width={270} // default width for desktop
+    height={79} // default height for desktop
     alt="Logo"
-    className="w-[120px] h-[50px] md:w-[186px] md:h-[74px]" // Responsive sizes
+    className="w-[120px] h-[50px] md:w-[279px] md:h-[79px]" // Responsive sizes
   />
 </Link>
 
