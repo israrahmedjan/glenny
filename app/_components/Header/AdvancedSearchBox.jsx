@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import { AwardIcon, Search } from "lucide-react";
 import { searchProductsByName } from "../lib/helper";
+import Loader from "../Loader";
 
 
 export default function SearchWithCategory() {
@@ -77,7 +78,7 @@ export default function SearchWithCategory() {
         </div>
       
    {/* search products */}
-   {loading && <div className="">loading</div>}
+   {loading && <div className="absolute z-30 border-gray-400 bg-gray-50 border-b top-[213px] sm:top-28 w-[360px] sm:w-[400px] pt-3"><Loader /></div>}
    
    {products.length>0 && 
     <div className="absolute border-gray-400 bg-gray-50 border-b top-[213px] sm:top-28 w-[360px] sm:w-[400px] pt-3">
