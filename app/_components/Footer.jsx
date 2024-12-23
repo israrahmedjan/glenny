@@ -9,7 +9,7 @@ function FooterPage() {
       <div className="sm:flex sm:items-center sm:justify-between">
         <div className="text-teal-600">
         <Link href="/" className="block text-teal-600">
-    <Image src={`${process.env.NEXT_PUBLIC_DOMAIN}/assets/images/logo.jpg/`} width={150} height={200} alt="" />
+    <Image src={`${process.env.NEXT_PUBLIC_DOMAIN}/assets/images/logo.png/`} width={150} height={200} alt="" />
     </Link>
         </div>
   

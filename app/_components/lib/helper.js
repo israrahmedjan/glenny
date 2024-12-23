@@ -130,3 +130,24 @@ if(cat_id)
 
   }
   
+  export const searchProductsByName = async (query)=>
+  {
+
+    try {
+      const { data, error } = await supabase
+        .from('products')
+        .select('*') // Replace with specific columns if needed
+        .ilike('name', `%${query}%`); // Search for names matching the query
+  
+      if (error) {
+        console.error('Error fetching products:', error.message);
+        return [];
+      }
+  
+      return data; // Returns the matching products
+    } catch (err) {
+      console.error('Unexpected error:', err.message);
+      return [];
+    }
+
+  }
