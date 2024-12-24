@@ -59,7 +59,7 @@ function ProductCard({item}) {
           
           <MiniCart item={item} />
         
-          <h1 className=''>{item.categories.title}</h1>
+          <h1 className=''>{item.categories?.title}</h1>
           </div>
         </div>
 
