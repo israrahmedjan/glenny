@@ -32,7 +32,7 @@ export default function DetailCart({item}) {
       
     
        {/* custom script */}
-        <div className="">
+       <div className='border-gray-100 border-r-2 border py-3 px-2 w-full sm:max-w-[769px] lg:max-w-[1024px] xl:max-w-[1280px] 2xl:max-w-[1536px] mt-4 mx-auto'>
           
           <div className="flex justify-between text-[20px] font-semibold mx-2 my-4">
               <h1 className="text-secondary text-[24px]">Cart items</h1>

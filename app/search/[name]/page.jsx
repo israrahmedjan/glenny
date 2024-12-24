@@ -35,7 +35,8 @@ function page() {
   return (
     <>
     <div className='border-gray-100 border-r-2 border py-3 px-2 w-full sm:max-w-[769px] lg:max-w-[1024px] xl:max-w-[1280px] 2xl:max-w-[1536px] mt-4 mx-auto'>
-    <h1 className="text-[25px] text-secondary font-semibold ml-2">Search Products : {name}</h1>
+    {/* <h1 className="text-[25px] text-secondary font-semibold ml-2">Search Products : {name}</h1> */}
+    <h1 className="text-[25px] font-bold bg-gradient-to-r from-black to-secondary bg-clip-text text-transparent">Search Products - {name}</h1>
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
     {loading && (<div><Loader /></div>)}
     {(products.length>0) && 

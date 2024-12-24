@@ -78,7 +78,9 @@ function ProductsByCategory({ categoryId, limit, categoryname }) {
 
           <div className="flex items-center text-primary">
             {/* <BaggageClaim className='size-12 text-primary' /> */}
-            <h1 className="text-[25px] text-secondary font-semibold ml-2">{categoryname}</h1>
+            {/* <h1 className="text-[25px] text-secondary font-semibold ml-2">{categoryname}</h1> */}
+            <h1 className="text-[25px] font-bold bg-gradient-to-r from-black to-secondary bg-clip-text text-transparent">
+            {categoryname}</h1>
           </div>
           <div className='flex items-center justify-end gap-2 text-primary'>
 
