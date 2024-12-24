@@ -35,7 +35,7 @@ export default function DetailCart({item}) {
         <div className="">
           
           <div className="flex justify-between text-[20px] font-semibold mx-2 my-4">
-              <h1 className="text-primary text-[24px]">Cart items</h1>
+              <h1 className="text-secondary text-[24px]">Cart items</h1>
               <span className="cursor-pointer" onClick={() => setIsOpen(false)} >X</span>
           </div>
           <hr className="border-t-2 border-gray-100 mx-0" />
@@ -43,7 +43,7 @@ export default function DetailCart({item}) {
             products.map((item,index)=>
             {
               return(<div key={index}>
-                <div className="flex justify-between mx-2 my-4 text-[14px] font-semibold">
+                <div className="flex justify-between mx-2 gap-2 my-4 text-[14px]">
                   <span>{index+1}</span>
                   <span><Image src={item?.mainImage} width={100} height={100} alt={item.name} /></span>
                   <span className="md:w-[150px]">{item.name}</span>
@@ -59,7 +59,7 @@ export default function DetailCart({item}) {
           <hr className="border-t-2 border-gray-100 mx-2" />
           
           {TotalPrice && <div className="flex justify-end items-center my-3 gap-2">
-            <span className="text-[16px] font-semibold">Total Price:    </span>
+            <span className="text-[16px] text-secondary font-semibold">Total Price:    </span>
             <span>${TotalPrice}</span>
             <span className="text-[16px] font-semibold"><CheckoutPage /></span>
             </div>}

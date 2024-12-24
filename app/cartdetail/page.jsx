@@ -3,7 +3,7 @@ import DetailCart from '../_components/DetailCart'
 
 function Page() {
   return (
-    <div className='mx-20'><DetailCart /></div>
+    <div className=''><DetailCart /></div>
   )
 }
 

@@ -74,7 +74,7 @@ function SecondaryMenu() {
          {(TotalPrice>0) ? <span>Total Price : ${TotalPrice}</span>:<span>Empty Cart - $0</span>}
          </div>
          
-          <div><ShoppingCart size={36} /></div>
+         <Link href={`${process.env.NEXT_PUBLIC_DOMAIN}/cartdetail`}><div><ShoppingCart size={36} /></div></Link> 
           {cartItemCount > 0 && (
                   <div className="relative bottom-2 right-2 bg-red-500 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
                     {cartItemCount}
@@ -113,7 +113,7 @@ function SecondaryMenu() {
          {(TotalPrice>0) ? <span>Total Price : ${TotalPrice}</span>:<span>Empty Cart - $0</span>}
          </div>
          
-          <div><ShoppingCart size={26} /></div>
+         <Link href={`${process.env.NEXT_PUBLIC_DOMAIN}/cartdetail`}><div><ShoppingCart size={26} /></div></Link>
           {cartItemCount > 0 && (
                   <div className="relative bottom-2 right-2 bg-red-500 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
                     {cartItemCount}

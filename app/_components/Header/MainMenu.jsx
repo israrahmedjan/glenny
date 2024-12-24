@@ -17,10 +17,10 @@ function MainMenu() {
  <Link href="/" className="block mt-4 mb-4">
   <Image
     src={`${process.env.NEXT_PUBLIC_DOMAIN}/assets/images/logo.png`}
-    width={270} // default width for desktop
+    width={279} // default width for desktop
     height={79} // default height for desktop
     alt="Logo"
-    className="w-[120px] h-[50px] md:w-[279px] md:h-[79px]" // Responsive sizes
+    className="w-[220px] h-[80px] md:w-[279px] md:h-[79px]" // Responsive sizes
   />
 </Link>
 
