@@ -3,8 +3,10 @@
 import { useEffect, useState } from "react";
 import { AddItems,hideToggle } from "../redux/CartSlice";
 import { useDispatch,useSelector } from "react-redux";
-import {ShoppingBasket} from "lucide-react";
+import {ShoppingBasket,CircleX} from "lucide-react";
+
 import Image from "next/image";
+import CombinedColor from "../Header/CombinedColor";
 
 export default function MiniCart({item}) {
   const [isOpen, setIsOpen] = useState(false);
@@ -47,6 +49,7 @@ console.log("Items added! useffect");
         className="w-[120px] border-secondary border text-primary text-sm py-2 rounded-lg hover:bg-secondary-dark transition duration-300"
       >
        <div className="flex items-center justify-center gap-2">
+       
        <span> <ShoppingBasket /></span><span>Add to Cart</span>
         </div>
       </button>
@@ -54,16 +57,23 @@ console.log("Items added! useffect");
       {/* Mini Cart Drawer */}
      {/* <div>open cond{JSON.stringify(isOpen)}</div> */}
       <div
-        className={`fixed z-40 top-0 right-0  w-80 h-full bg-white shadow-lg transform ${
+        className={`fixed z-40 top-0 right-0  w-full h-auto sm:w-80 bg-white shadow-lg transform ${
           cartstatus ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300 ease-in-out`}
       >
        {/* custom script */}
         <div className="">
           
-          <div className="flex justify-between text-[16px] font-semibold mx-2 my-4">
-              <h1 className="text-secondary text-[15px] uppercase font-normal">Cart items</h1>
-              <span className="cursor-pointer" onClick={() => dispatch(hideToggle())} >X</span>
+          <div className="flex justify-between font-semibold mx-2 my-4">
+          <div className="flex items-center space-x-2">
+          <ShoppingBasket size={30} className="text-black" /> 
+          <CombinedColor colorsize="20px" text="Cart Items" />
+          </div>
+          
+<CircleX
+  className="cursor-pointer text-red-900 ml-2"
+  onClick={() => dispatch(hideToggle())}
+/>
           </div>
           
           <hr className="border-t-2 border-gray-100 mx-0" />
@@ -86,8 +96,9 @@ console.log("Items added! useffect");
           }
           <hr className="border-t-2 border-gray-100 mx-2" />
           {TotalPrice && <div className="flex justify-end my-3 gap-2">
-            <span className="text-[16px] font-normal text-secondary uppercase">Total Price:    </span>
+            <span className="text-[16px] font-normal text-secondary uppercase"><CombinedColor text="Total Price : " /></span>
             <span>${TotalPrice}</span>
+           
             </div>}
       </div>
       {/* custom script end */}

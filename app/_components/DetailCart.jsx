@@ -5,6 +5,8 @@ import { AddItems } from "./redux/CartSlice";
 import { useDispatch,useSelector } from "react-redux";
 import Image from "next/image";
 import CheckoutPage from "./checkout";
+import CombinedColor from "./Header/CombinedColor";
+import { Circle } from "lucide-react";
 
 export default function DetailCart({item}) {
   const [isOpen, setIsOpen] = useState(true);
@@ -33,9 +35,11 @@ export default function DetailCart({item}) {
     
        {/* custom script */}
        <div className='border-gray-100 border-r-2 border py-3 px-2 w-full sm:max-w-[769px] lg:max-w-[1024px] xl:max-w-[1280px] 2xl:max-w-[1536px] mt-4 mx-auto'>
-          
+       
           <div className="flex justify-between text-[20px] font-semibold mx-2 my-4">
-              <h1 className="text-secondary text-[24px]">Cart items</h1>
+            <CombinedColor colorsize="25px" text="Cart Items" />
+            
+              
               <span className="cursor-pointer" onClick={() => setIsOpen(false)} >X</span>
           </div>
           <hr className="border-t-2 border-gray-100 mx-0" />
