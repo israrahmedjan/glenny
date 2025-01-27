@@ -1,13 +1,14 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import { Home, Search, User, Settings } from "lucide-react";
+import Mobilefooter from './Mobilefooter'
+
 
 function FooterPage() {
   return (
     <>
     {/* For desktop */}
-    <footer className="bg-white border-t border sm:block hidden">
+    <footer className="bg-white border-t border hidden lg:block">
     <div className="mx-auto max-w-screen-xl space-y-8 px-4 py-16 sm:px-6 lg:space-y-16 lg:px-8">
       <div className="sm:flex sm:items-center sm:justify-between">
         <div className="text-teal-600">
@@ -118,30 +119,7 @@ function FooterPage() {
   </footer>
 
   {/* For Mobile Devices */}
-  <footer className="fixed bottom-0 left-0 right-0 bg-white shadow-md border-t border-gray-200">
-      <nav className="flex justify-around items-center h-16">
-        {/* Home Icon */}
-        <a href="/" className="flex flex-col items-center text-gray-600 hover:text-blue-500">
-          <Home className="w-6 h-6" />
-          <span className="text-xs">Home</span>
-        </a>
-        {/* Search Icon */}
-        <a href="/search" className="flex flex-col items-center text-gray-600 hover:text-blue-500">
-          <Search className="w-6 h-6" />
-          <span className="text-xs">Search</span>
-        </a>
-        {/* Profile Icon */}
-        <a href="/profile" className="flex flex-col items-center text-gray-600 hover:text-blue-500">
-          <User className="w-6 h-6" />
-          <span className="text-xs">Profile</span>
-        </a>
-        {/* Settings Icon */}
-        <a href="/settings" className="flex flex-col items-center text-gray-600 hover:text-blue-500">
-          <Settings className="w-6 h-6" />
-          <span className="text-xs">Settings</span>
-        </a>
-      </nav>
-    </footer>
+<Mobilefooter />
   </>
   )
 }
