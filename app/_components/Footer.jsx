@@ -8,7 +8,7 @@ function FooterPage() {
   return (
     <>
     {/* For desktop */}
-    <footer className="bg-white border-t border hidden lg:block">
+    <footer className="bg-white border-t border hidden md:block">
     <div className="mx-auto max-w-screen-xl space-y-8 px-4 py-16 sm:px-6 lg:space-y-16 lg:px-8">
       <div className="sm:flex sm:items-center sm:justify-between">
         <div className="text-teal-600">

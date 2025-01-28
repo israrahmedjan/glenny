@@ -20,26 +20,28 @@ function ProductCard({item}) {
  
       {/* item Image */}
       <Link href={`${process.env.NEXT_PUBLIC_DOMAIN}/product/${item.pro_id}`}>      
-      <Image 
-        className="w-full md:h-[320px] object-cover" 
-        src={item?.mainImage} 
-        width={400} height={300}
-        alt={item.name} 
-      />
+      <Image
+  className="w-full h-[200px] md:h-[320px] lg:h-[400px] object-cover"
+  src={item?.mainImage}
+  width={400}
+  height={300}
+  alt={item.name}
+/>
       </Link>
 
       
       <div className="">
-        <div className='flex justify-between'>
+        <div className='flex flex-col lg:flex-row justify-between'>
         {/* item Title */}
         <Link href={`${process.env.NEXT_PUBLIC_DOMAIN}/product/${item.pro_id}`}>
-        <h2 className="text-[18px] p-2 text-gray-800 font-normal">{item.name}</h2>
+        <h2 className="text-base md:text-lg p-2 text-gray-800 font-normal">{item.name}</h2>
         </Link>
         
         {/* Price */}
-        <p className="text-[18px] p-2 text-gray-800">${item.price}</p>
+        <p className="text-base p-2 text-gray-800 md:text-lg">price : ${item.price}</p>
         </div>
         {/* Description */}
+        {item.description &&
         <p className="text-gray-600 text-sm mt-4">
           {item.description 
             ? `${item.description.slice(0, 100)}...` 
@@ -47,6 +49,7 @@ function ProductCard({item}) {
 
             {/* {item.description} */}
         </p>
+}
         
         {/* Add to Cart Button */}
         <div className="mt-6">
@@ -54,7 +57,7 @@ function ProductCard({item}) {
             Add to Cart
             
           </button> */}
-          <div className='flex justify-between'>
+          <div className='flex flex-col md:flex-row justify-center items-center text-base'>
           {/* <MiniCart item={item}  /> */}
           
           <MiniCart item={item} />

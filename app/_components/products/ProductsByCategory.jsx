@@ -73,7 +73,7 @@ function ProductsByCategory({ categoryId, limit, categoryname }) {
 
   return (
     <>
-      <div className='border-gray-100 border-r-2 border py-3 px-2 w-full sm:max-w-[769px] lg:max-w-[1024px] xl:max-w-[1280px] 2xl:max-w-[1536px] mt-4 mx-auto'>
+      <div className='border-gray-100 border-r-2 border py-3 px-2 w-full sm:max-w-[769px] lg:max-w-[1024px] xl:max-w-[1280px] 2xl:max-w-[1536px] mx-auto'>
       <div className='flex flex-col md:flex-row justify-between my-2 '>
 
           <div className="flex items-center text-primary">
@@ -100,7 +100,7 @@ function ProductsByCategory({ categoryId, limit, categoryname }) {
           </div>
         </div>
         {(products.length == 0) && (<div><Loader /></div>)}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 text-base sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {/* <p>{JSON.stringify(plusstr)}</p> */}
           {/* Sort Items  */}
           {/* <pre>{JSON.stringify(products, null, 2)}</pre> */}
